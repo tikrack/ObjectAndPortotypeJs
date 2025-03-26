@@ -33,3 +33,12 @@ Car.prototype.test2 = function() {
 }
 
 console.log(car3.test2())
+
+
+Object > {
+    Array
+    String
+    Number
+    Boolean
+    ...
+}
