@@ -23,3 +23,7 @@ function Car () {
 
 const car3 = new Car()
 car3.test = "its a test"
+
+if (car3 instanceof Object) {
+    console.log("ok");
+}
