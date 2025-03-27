@@ -43,3 +43,23 @@ var car4 = Object.create(null)
 var car5 = Object.create(car3)
 
 console.log(car5.test)
+
+
+// ------------------------------------
+var obj = {
+    name: "ali",
+    family: "hosseini",
+    age: 15
+}
+
+function getData(name) {
+    console.log(name, this.family, this.age);
+}
+
+getData.apply(obj, [
+    obj.name
+])
+
+getData.call(obj, obj.name)
+
+// هر سه تا متود مثل هم کار میکنند اما در متد اپلای ارگومان ها به صورت ارایه هستند اما در متد کال ارگومان ها به صورت ساده و  props هستند همچنین فرق متد bind  با دو متد دیگر این است که ان دو متد در هین پاس دادن مقادیر ان تابع را هم نیز اجرا میکنند اما این متد اینگونه نیست و در حین پاس دادن ران نمیکند
