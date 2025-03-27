@@ -34,11 +34,12 @@ Car.prototype.test2 = function() {
 
 console.log(car3.test2())
 
+// ----------------------------------------- create an object without any prototype
 
-Object > {
-    Array
-    String
-    Number
-    Boolean
-    ...
-}
+var car4 = Object.create(null)
+
+// ----------------------------------------- create an object with a prototype but extend from car3
+
+var car5 = Object.create(car3)
+
+console.log(car5.test)
